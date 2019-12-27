@@ -12,7 +12,7 @@ keys.forEach(key => {
 setInterval(function() {
     let randomColor = Math.floor(Math.random() * 16777215).toString(16);
     document.body.style.backgroundColor = "#" + randomColor;
-}, 2000);
+}, 5000);
 
 document.addEventListener("keydown", notnhac => {
     if (notnhac.repeat) return;
