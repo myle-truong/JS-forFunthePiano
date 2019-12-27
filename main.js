@@ -7,12 +7,12 @@ const blackKeys = document.querySelectorAll(".key.black");
 
 keys.forEach(key => {
     key.addEventListener("click", () => playNote(key));
-    let x = Math.floor(Math.random() * 256);
-    let y = Math.floor(Math.random() * 256);
-    let z = Math.floor(Math.random() * 256);
-    let bgColor = "rgb(" + x + "," + y + "," + z + ")";
-    document.body.style.backgro = bgColor;
 });
+
+setInterval(function() {
+    let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    document.body.style.backgroundColor = "#" + randomColor;
+}, 1000);
 
 document.addEventListener("keydown", notnhac => {
     if (notnhac.repeat) return;
@@ -33,3 +33,8 @@ function playNote(key) {
         key.classList.remove("active");
     });
 }
+/*    let x = Math.floor(Math.random() * 256);
+    let y = Math.floor(Math.random() * 256);
+    let z = Math.floor(Math.random() * 256);
+    let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    document.body.style.background = bgColor; */
