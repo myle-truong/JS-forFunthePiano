@@ -11,7 +11,7 @@ keys.forEach(key => {
     let y = Math.floor(Math.random() * 256);
     let z = Math.floor(Math.random() * 256);
     let bgColor = "rgb(" + x + "," + y + "," + z + ")";
-    document.body.style.background = bgColor;
+    document.body.style.backgro = bgColor;
 });
 
 document.addEventListener("keydown", notnhac => {
